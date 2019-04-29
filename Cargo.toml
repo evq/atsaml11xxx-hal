@@ -1,0 +1,60 @@
+[package]
+name = "atsaml11xxx-hal"
+version = "0.1.0"
+authors = ["eV <ev@7pr.xyz>"]
+
+[dependencies]
+nb = "~0.1"
+
+[dependencies.arrayvec]
+version = "0.4.7"
+default-features = false
+
+[dependencies.atsaml11xxx]
+git = "https://github.com/evq/atsaml11xxx"
+rev = "ef8ea3ae8f1265c11d2ca9a4ddcd9f4c0a176d4f"
+
+[dependencies.embedded-hal]
+features = ["unproven"]
+version = "0.2.2"
+
+#[dependencies.rand]
+#version = "0.5"
+#default-features = false
+#optional = true
+
+[dependencies.rand_core]
+default-features = false
+version = "0.2"
+optional = true
+
+[dependencies.cortex-m]
+git = "https://github.com/rust-embedded/cortex-m"
+rev = "b70a2179f4e8ee7908b61a6a97970e0cfcf2f313"
+
+[dev-dependencies.cortex-m]
+git = "https://github.com/rust-embedded/cortex-m"
+rev = "b70a2179f4e8ee7908b61a6a97970e0cfcf2f313"
+
+[dev-dependencies.cortex-m-rt]
+git = "https://github.com/rust-embedded/cortex-m-rt"
+rev = "9cd01176a6a9985c9bc0040801ed593687dd6ab1"
+
+[dev-dependencies.cortex-m-semihosting]
+git = "https://github.com/rust-embedded/cortex-m-semihosting"
+rev = "471378bc848172e12e22b9a3b83190747e70bf5c"
+
+[dev-dependencies.panic-semihosting]
+git = "https://github.com/evq/panic-semihosting"
+rev = "3d7041af24969f32606e5eb804e23eaac7fb0bfa"
+
+[dev-dependencies]
+rust-crypto = "^0.2"
+hex-literal = "0.1.2"
+
+#[features]
+#rand = ["rand_core"]
+
+[profile.release]
+debug = false
+lto = true
