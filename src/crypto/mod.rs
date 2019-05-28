@@ -160,11 +160,11 @@ impl Sha256 {
 mod tests {
     use super::*;
 
-    #[test]
-    fn works() {
-        let rom_api = RomCryptoApi::api_table();
-        println!("{:p}", rom_api.crya_sha_process);
-    }
+    //#[test]
+    //fn works() {
+        //let rom_api = RomCryptoApi::api_table();
+        //println!("{:p}", rom_api.crya_sha_process);
+    //}
 
     #[test]
     fn test_sha256() {

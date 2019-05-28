@@ -1,10 +1,6 @@
 #![no_std]
 #![feature(const_transmute)]
 
-#[cfg(test)]
-#[macro_use]
-extern crate std;
-
 pub extern crate atsaml11xxx;
 pub extern crate embedded_hal as hal;
 
